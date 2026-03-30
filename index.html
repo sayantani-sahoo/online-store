@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Store - Premium Shopping Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h1 class="logo"><i class="fas fa-store"></i> ModernStore</h1>
+            </div>
+            <div class="nav-search">
+                <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+            </div>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Discover Amazing Deals</h2>
+            <p>Up to 50% off on premium electronics, fashion & more</p>
+            <button class="cta-btn">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="container">
+            <!-- Categories & Filters -->
+            <div class="controls-grid">
+                <!-- Category Tabs -->
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="all">All</button>
+                    <button class="tab-btn" data-category="Electronics">Electronics</button>
+                    <button class="tab-btn" data-category="Fashion">Fashion</button>
+                    <button class="tab-btn" data-category="Home Appliances">Home</button>
+                    <button class="tab-btn" data-category="Books">Books</button>
+                </div>
+
+                <!-- Filters Sidebar -->
+                <div class="filters-panel">
+                    <h3><i class="fas fa-filter"></i> Filters</h3>
+                    
+                    <!-- Price Range -->
+                    <div class="filter-group">
+                        <label>Price Range</label>
+                        <div class="range-container">
+                            <input type="range" id="priceRange" min="0" max="1000" value="1000" class="price-slider">
+                            <div class="price-values">
+                                <span id="minPrice">$0</span>
+                                <span id="maxPrice">$1000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rating Filter -->
+                    <div class="filter-group">
+                        <label>Ratings</label>
+                        <div class="rating-filters">
+                            <label><input type="checkbox" value="5"> 5★ &amp; above</label>
+                            <label><input type="checkbox" value="4"> 4★ &amp; above</label>
+                            <label><input type="checkbox" value="3"> 3★ &amp; above</label>
+                        </div>
+                    </div>
+
+                    <!-- Sort -->
+                    <div class="filter-group">
+                        <label>Sort By</label>
+                        <select id="sortSelect">
+                            <option value="default">Recommended</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating-high">Rating: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <section class="products-section">
+                <div class="products-header">
+                    <h2 id="productsTitle">Featured Products</h2>
+                    <div class="products-count" id="productsCount">24 products</div>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Dynamic product cards will be inserted here -->
+                    <div class="product-skeleton"></div>
+                    <div class="product-skeleton"></div>
+                    <div class="product-skeleton"></div>
+                    <div class="product-skeleton"></div>
+                    <div class="product-skeleton"></div>
+                    <div class="product-skeleton"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ModernStore</h3>
+                    <p>Premium shopping experience with best prices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Books</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ModernStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Product added to cart!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
